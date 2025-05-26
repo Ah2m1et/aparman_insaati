@@ -1,0 +1,1 @@
+Bu projede, 10 katlı ve her katında 4 daire bulunan bir apartmanın inşaat sürecini modelleyerek işletim sistemlerinin temel kavramları olan process (süreç), thread (iş parçacığı) ve senkronizasyon mekanizmalarını pratik olarak uygulamak amaçlanmıştır.
