@@ -2,26 +2,28 @@ Bu projede, 10 katlı ve her katında 4 daire bulunan bir apartmanın inşaat s�
 
 Derleme ve Çalıştırma:
 
-    Kaynak Dosyaları Derle (.o object dosyaları oluştur):
-    Bash
+Kaynak Dosyaları Derle (.o object dosyaları oluştur):
+    
+    ´´´Bash
+    
+    gcc -c daire_insaat.c -o daire_insaat.o -pthread
+    gcc -c kat_insaat.c -o kat_insaat.o -pthread
+    gcc -c main.c -o main.o
 
-gcc -c daire_insaat.c -o daire_insaat.o -pthread
-gcc -c kat_insaat.c -o kat_insaat.o -pthread
-gcc -c main.c -o main.o
+    ´´´
 
-    -c: Sadece derle, linkleme yapma.
-    -pthread: Thread kütüphanesiyle ilgili kodlar olduğu için daire_insaat.c ve kat_insaat.c derlenirken bu bayrak gerekir.
+-c: Sadece derle, linkleme yapma.
+-pthread: Thread kütüphanesiyle ilgili kodlar olduğu için daire_insaat.c ve kat_insaat.c derlenirken bu bayrak gerekir.
 
 Object Dosyalarını Linkle (Çalıştırılabilir Dosya Oluştur):
-Bash
-
-gcc main.o kat_insaat.o daire_insaat.o -o apartman_insaat -pthread
-
-    -o apartman_insaat: Çıktı dosyasının adını apartman_insaat yap.
-    -pthread: Thread kütüphanesini linkle.
+    
+    gcc main.o kat_insaat.o daire_insaat.o -o apartman_insaat -pthread
+    
+-o apartman_insaat: Çıktı dosyasının adını apartman_insaat yap.
+-pthread: Thread kütüphanesini linkle.
 
 Çalıştır:
 Bash
 
-./apartman_insaat
+    ./apartman_insaat
 
