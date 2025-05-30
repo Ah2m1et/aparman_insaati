@@ -3,14 +3,12 @@ Bu projede, 10 katlı ve her katında 4 daire bulunan bir apartmanın inşaat s�
 Derleme ve Çalıştırma:
 
 Kaynak Dosyaları Derle (.o object dosyaları oluştur):
-    
-    ´´´Bash
+
     
     gcc -c daire_insaat.c -o daire_insaat.o -pthread
     gcc -c kat_insaat.c -o kat_insaat.o -pthread
     gcc -c main.c -o main.o
 
-    ´´´
 
 -c: Sadece derle, linkleme yapma.
 -pthread: Thread kütüphanesiyle ilgili kodlar olduğu için daire_insaat.c ve kat_insaat.c derlenirken bu bayrak gerekir.
